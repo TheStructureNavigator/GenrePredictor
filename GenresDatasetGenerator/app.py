@@ -97,9 +97,9 @@ def main():
 
                 if save_extracted_dataframe:
                     save_data(
-                        st.session_state['extracted_data'], 'Albums/streamlit.csv')
+                        st.session_state['extracted_data'], 'Albums/test.csv')
                     st.write("Extracted Data has been saved.")
-                    st.write("File saved in Albums/streamlit.csv'.")
+                    st.write("File saved in Albums/test.csv'.")
     
     st.divider()
 
@@ -205,10 +205,10 @@ def main():
 
         with show_populating:
 
-            st.write('To change number of news samples to populate, look into code')
+            st.write('To change number of new samples to populate, look into code')
             
             #Number of samples
-            n = 100
+            n = 1000
 
             if st.button('Populate with additional data'):
                 
@@ -267,7 +267,7 @@ def main():
 
             if st.button('Add Genre'):
 
-                dataframe['genres'] = 'hiphop'
+                dataframe['genres'] = 'classical'
 
                 # Update session state
                 st.session_state['editable_data'] = dataframe
@@ -279,10 +279,10 @@ def main():
         save_edited_dataframe = st.button('Save Edited Dataframe')
         
         if save_edited_dataframe:
-
-            save_data(st.session_state['editable_data'], 'Albums/edited_streamlit.csv')
+            path = 'Genres/AlternativeGenre_pop.csv'
+            save_data(dataframe, path)
             st.write("Extracted Data has been saved.")
-            st.write('Albums/edited_streamlit.csv')
+            st.write(path)
 
     else:
         
