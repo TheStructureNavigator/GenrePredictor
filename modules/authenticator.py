@@ -5,8 +5,8 @@ from spotipy.oauth2 import SpotifyClientCredentials
 ####################################################
 
 #----------------Client keys------------------#
-client_id = 'a7058d1ff16a485fbf7b490d8737e92e'
-secret = 'bce158ba00fb48718c49c44651f9aa45'
+client_id = ''
+secret = ''
 #---------------------------------------------#
 
 #--------------------------------Authenticator-----------------------------------#
